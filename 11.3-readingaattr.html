@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 11.3</title>
+    <script>
+    function readAttr() {
+    
+    var x = document.getElementsByTagName("a")[0].getAttribute("href"); //reading tag by name a and attribute with getAttribute method
+    var y = document.getElementsByTagName("a")[0].getAttribute("id"); 
+    var z = document.getElementsByTagName("a")[0].getAttribute("target");
+    document.getElementById("attr").innerHTML = "href="+x+'<br>'+"id="+y+'<br>'+"target="+z; //dislay a attributes read above through x,y,z
+}
+    function removeAttr() {
+        
+        document.getElementById("attr").innerHTML=" "; //To remove result we just set innerHTML to empty string
+    }
+    </script>
+</head>
+<body>
+   <a href="https://www.w3schools.com/" id="google" target="_self">W3Pages</a>
+   <div id="attr">Div Tag</div>
+   <button onclick="readAttr()">Show Attributes of link</button>
+   <button onclick="removeAttr()">Remove Result</button>
+</body>
+</html>
